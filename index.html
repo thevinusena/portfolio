@@ -4,430 +4,466 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thevinu Senaratne</title>
+  <meta name="description" content="Thevinu Senaratne - software engineering undergraduate, AI-focused web developer, and UI builder." />
+  <title>Thevinu Senaratne | Software Engineer</title>
 
-  <!-- Stylesheets (kept separate as original) -->
-  <link rel="stylesheet" href="https://thevinusena.github.io/portfolio/styles/main.css">
-  <link rel="stylesheet" href="https://thevinusena.github.io/portfolio/styles/sections.css">
-
-  <!-- Font Awesome (kept as original). crossorigin retained for kit usage. -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/sections.css">
   <script src="https://kit.fontawesome.com/22b4708d5a.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
-  <!-- Main navigation sidebar -->
-  <nav role="navigation" aria-label="Main sidebar navigation">
-    <div class="sidebar">
-      <div class="nav-links">
-        <!-- Each anchor is an in-page link to a section -->
-        <a href="#home">
-          <i class="fa-solid fa-house" aria-hidden="true"></i>
-          <span class="tooltip">Home</span>
-        </a>
-        <a href="#about">
-          <i class="fa-solid fa-user" aria-hidden="true"></i>
-          <span class="tooltip">About Me</span>
-        </a>
-        <a href="#skills">
-          <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
-          <span class="tooltip">Skills</span>
-        </a>
-        <a href="#education">
-          <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-          <span class="tooltip">Education</span>
-        </a>
-        <a href="#web_projects">
-          <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
-          <span class="tooltip">Web Projects</span>
-        </a>
-        <a href="#contact">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>
-          <span class="tooltip">Contact</span>
-        </a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Resume open button (triggers JS modal). Use role="button" & aria-controls for accessibility. -->
-        <a href="#" id="openPdf" role="button" aria-controls="pdfModal" aria-expanded="false">
+  <header class="site-header" data-header>
+    <nav class="command-bar" aria-label="Primary navigation">
+      <a class="brand-mark" href="#home" aria-label="Thevinu Senaratne home">
+        <span class="brand-glyph">TS</span>
+        <span>Thevinu Senaratne</span>
+      </a>
+
+      <div class="desktop-nav" aria-label="Section links">
+        <a href="#about">About</a>
+        <a href="#skills">Stack</a>
+        <a href="#education">Education</a>
+        <a href="#web_projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="header-actions">
+        <a class="icon-button" href="https://github.com/thevinusena" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="icon-button" href="https://www.linkedin.com/in/thevinusenaratne/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <button class="button button-compact" type="button" id="openPdf" aria-controls="pdfModal" aria-expanded="false">
           <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-          <span class="tooltip">Resume</span>
-        </a>
-      </div>
-
-      <!-- Social links (open in new tab) -->
-      <div class="social-links" aria-label="Social links">
-        <a rel="noopener noreferrer" href="https://www.linkedin.com/in/thevinusenaratne/" target="_blank" id="linkedin">
-          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          <span class="tooltip">LinkedIn</span>
-        </a>
-        <a rel="noopener noreferrer" href="https://www.instagram.com/thevinusena/" target="_blank" id="instagram">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          <span class="tooltip">Instagram</span>
-        </a>
-        <a rel="noopener noreferrer" href="https://github.com/thevinusena" target="_blank" id="github">
-          <i class="fa-brands fa-github" aria-hidden="true"></i>
-          <span class="tooltip">GitHub</span>
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Page content -->
-  <div class="content">
-
-    <!-- HOME -->
-    <section id="home" aria-labelledby="home-heading">
-      <h1 id="home-heading" class="visually-hidden"></h1>
-      <div class="name-header" aria-hidden="false">
-        <div class="first">Thevinu</div>
-        <div class="last">Senaratne</div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading" class="visually-hidden"></h2>
-
-      <!-- Profile photo: added loading="lazy" and improved alt text -->
-      <div class="about-photo">
-        <img src="pic1.JPG" alt="Portrait of Thevinu Senaratne" loading="lazy">
-      </div>
-
-      <!-- About content: fixed missing space after period and preserved original content -->
-      <div class="about-content">
-        <h2 class="section-title">About Me</h2>
-        <p>
-          I’m a <span class="highlight">Software Engineering Undergraduate</span> with a solid foundation in design.
-          I’m passionate about AI development and excel at creating engaging user interfaces.
-        </p>
-
-        <!-- Buy Me a Coffee button -->
-        <p>
-          <a rel="noopener noreferrer" href="https://buymeacoffee.com/thevinu" target="_blank">
-            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee button" class="coffee-btn" loading="lazy">
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading" class="section-title">Skills</h2>
-      <div class="skill-pills" role="list" aria-label="Skills list">
-        <!-- Icons kept for visual identification; aria-hidden on icons so screen readers read the text -->
-        <span class="big-pill" role="listitem"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML</span>
-        <span class="big-pill" role="listitem"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS</span>
-        <span class="big-pill" role="listitem"><i class="fa-brands fa-square-js" aria-hidden="true"></i> JavaScript</span>
-        <span class="big-pill" role="listitem"><i class="fa-brands fa-laravel" aria-hidden="true"></i> Laravel</span>
-
-        <!-- MySQL icon is an inline image; alt provided so screen readers can identify it -->
-        <span class="big-pill" role="listitem">
-          <img src="https://thevinusena.github.io/portfolio/mysql_icon.svg" alt="MySQL" width="24" height="24" loading="lazy"> MySQL
-        </span>
-
-        <span class="big-pill" role="listitem"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
-        <span class="big-pill" role="listitem"><i class="fa-brands fa-java" aria-hidden="true"></i> Java</span>
-        <span class="big-pill" role="listitem"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Graphic Design</span>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" aria-labelledby="education-heading">
-      <h2 id="education-heading" class="section-title">Education</h2>
-
-      <!-- Education list: kept structure; added commas and minor punctuation consistency -->
-      <ul class="education-list">
-        <li class="edu-item">
-          <div class="edu-content">
-            <p class="qualification">BSc. Software Engineering</p>
-            <p class="institute">Lithan EduClaas, Singapore</p>
-          </div>
-          <time class="period" datetime="2023-01">2023 - Present</time>
-        </li>
-
-        <li class="edu-item">
-          <div class="edu-content">
-            <p class="qualification">Diploma in Software Engineering</p>
-            <p class="institute">Esoft Metro Campus</p>
-          </div>
-          <time class="period" datetime="2020-01">2020 - 2022</time>
-        </li>
-
-        <li class="edu-item">
-          <div class="edu-content">
-            <p class="qualification">Primary &amp; Secondary Education</p>
-            <p class="institute">S. Thomas' College, Mount Lavinia</p>
-          </div>
-          <time class="period" datetime="2009-01">2009 - 2023</time>
-        </li>
-      </ul>
-    </section>
-
-    <!-- WEB PROJECTS -->
-    <section id="web_projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" class="section-title">Web Projects</h2>
-
-      <!-- Project: ABC Cars -->
-      <div class="web_project-box" id="abc-cars">
-        <div class="web_project-info">
-          <h3 class="web_project-title">ABC Cars</h3>
-
-          <!-- Description: fixed invalid nesting (removed <ul> from inside <p>) -->
-          <div class="web_project-description">
-            <p>
-              Developed a fully functional Used Car Sales Portal using PHP (Laravel) with Breeze for authentication
-              and MySQL Workbench for database design.
-            </p>
-
-            <strong>Key features include:</strong>
-            <ul>
-              <li><strong>Buyer-Seller Interactions:</strong> User registration, secure login, car listing and management (including images and detailed specifications).</li>
-              <li><strong>Advanced Features:</strong> Bidding on vehicles, test drive scheduling, profile updates, and advanced search filters (Make, Model, Year, Price Range).</li>
-              <li><strong>Administrator Interface:</strong> Oversight of listings, approval/rejection of transactions, and user management.</li>
-              <li><strong>UI Design:</strong> Intuitive, responsive interface for easy navigation and efficient transactions.</li>
-            </ul>
-          </div>
-
-          <!-- Tech stack and GitHub link -->
-          <div class="tech-stack" aria-hidden="false">
-            <span class="pill">Laravel</span>
-            <span class="pill">Laravel Breeze</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">PHP</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <a rel="noopener noreferrer" class="github-link" href="https://github.com/thevinusena/abc-cars" target="_blank">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- Slideshow container: images marked lazy and descriptive alt text -->
-        <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="ABC Cars screenshots">
-          <div class="slides">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/abc_cars/homepage.png" alt="ABC Cars - homepage screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/abc_cars/aboutpage.png" alt="ABC Cars - about page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/abc_cars/searchpage.png" alt="ABC Cars - search page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/abc_cars/listingpage.png" alt="ABC Cars - listing page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/abc_cars/admindashpage.png" alt="ABC Cars - admin dashboard screenshot" loading="lazy" decoding="async">
-          </div>
-
-          <!-- Carousel controls: added aria-labels for accessibility -->
-          <button type="button" class="prev" title="Previous Slide" aria-label="Previous slide"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-          <button type="button" class="next" title="Next Slide" aria-label="Next slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-          <button type="button" class="fullscreen-btn" title="Full screen" aria-label="Toggle fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i> Fullscreen</button>
-        </div>
-      </div>
-
-      <hr class="divider" />
-
-      <!-- Project: LifeSync AI -->
-      <div class="web_project-box" id="lifesync-ai">
-        <div class="web_project-info">
-          <h3 class="web_project-title">LifeSync AI</h3>
-
-          <!-- Description: fixed nesting and standardized AI model name to "reka-flash-3" (as used elsewhere) -->
-          <div class="web_project-description">
-            <p>
-              Developed the LifeSync web app using PHP (Laravel) with Laravel Breeze for authentication and MySQL Workbench
-              for database design. Integrated an AI model (OpenRouter.ai — <code>reka-flash-3</code>) to generate personalized
-              weekly workout and meal plans based on rich user context (health profile, dietary preferences, sleep, stress, travel).
-            </p>
-
-            <strong>Key features include:</strong>
-            <ul>
-              <li><strong>Personalized Plans:</strong> AI generates tailored plans based on individual user data.</li>
-              <li><strong>User Interaction:</strong> Endpoints to POST profiles, persist plans, "Generate Plan" button with expandable weekly calendar, and a "Refresh Plan" option.</li>
-            </ul>
-          </div>
-
-          <div class="tech-stack">
-            <span class="pill">reka-flash-3</span>
-            <span class="pill">Laravel</span>
-            <span class="pill">Laravel Breeze</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">PHP</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <a rel="noopener noreferrer" class="github-link" href="https://github.com/thevinusena/lifesync-AI" target="_blank">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="LifeSync AI screenshots">
-          <div class="slides">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/lifesync_ai/homepage.png" alt="LifeSync AI - homepage screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/lifesync_ai/aboutpage.png" alt="LifeSync AI - about page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/lifesync_ai/loginpage.png" alt="LifeSync AI - login page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/lifesync_ai/profilepage.png" alt="LifeSync AI - profile page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/lifesync_ai/planspage.png" alt="LifeSync AI - plans page screenshot" loading="lazy" decoding="async">
-          </div>
-
-          <button type="button" class="prev" title="Previous Slide" aria-label="Previous slide"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-          <button type="button" class="next" title="Next Slide" aria-label="Next slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-          <button type="button" class="fullscreen-btn" title="Full screen" aria-label="Toggle fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i> Fullscreen</button>
-        </div>
-      </div>
-
-      <hr class="divider" />
-
-      <!-- Project: Clarity Consultants lk -->
-      <div class="web_project-box" id="clarity-consultants">
-        <div class="web_project-info">
-          <h3 class="web_project-title">Clarity Consultants lk</h3>
-
-          <!-- Description: How i made "Clarity Consultants lk" -->
-          <div class="web_project-description">
-            <p>
-              Built, Designed and Launched the Clarity Consultants marketing site clarityconsultantslk.com.
-              I handled hosting and domain setup, implemented a responsive layout to view in all devices, added a PHP contact form to receive enquiries, and created JavaScript sliders for the hero section and testimonials.
-            </p>
-
-            <strong>Key features include:</strong>
-            <ul>
-              <li><strong>UI/UX:</strong> Designed a modern, clean interface with intuitive navigation and responsive layout.</li>
-              <li><strong>Live site &amp; domain:</strong> DNS configured and site deployed to production hosting. with github and hostinger</li>
-              <li><strong>PHP contact form:</strong> Server-side form handling or email notifications.</li>
-              <li><strong>Interactive sliders:</strong> JavaScript-powered sliders for hero content and client testimonials.</li>
-              <li><strong>Clear marketing structure:</strong> Pages for Home, About, Services, Team and Contact to present firm offerings and team bios.</li>
-            </ul>
-          </div>
-
-          <div class="tech-stack">
-            <span class="pill">JavaScript</span>
-            <span class="pill">PHP</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">Hostinger</span>
-            <span class="pill">GitHub</span>
-            <a rel="noopener noreferrer" class="github-link" href="https://clarityconsultantslk.com/" target="_blank">
-              <i class="fa-solid fa-globe" aria-hidden="true"></i> View Website
-            </a>
-          </div>
-        </div>
-
-        <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="Clarity Consultants screenshots">
-          <div class="slides">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/clarityconsultantslk/home.png" alt="Clarity Consultants - homepage screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/clarityconsultantslk/about.png" alt="Clarity Consultants - about page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/clarityconsultantslk/services.png" alt="Clarity Consultants - services page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/clarityconsultantslk/team.png" alt="Clarity Consultants - team page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/clarityconsultantslk/contact.png" alt="Clarity Consultants - contact page screenshot" loading="lazy" decoding="async">
-          </div>
-
-          <button type="button" class="prev" title="Previous Slide" aria-label="Previous slide"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-          <button type="button" class="next" title="Next Slide" aria-label="Next slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-          <button type="button" class="fullscreen-btn" title="Full screen" aria-label="Toggle fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i> Fullscreen</button>
-        </div>
-      </div>      
-
-      <hr class="divider" />
-
-      <!-- Project: Jumpstart AI -->
-      <div class="web_project-box" id="jumpstart-ai">
-        <div class="web_project-info">
-          <h3 class="web_project-title">Jumpstart AI</h3>
-
-          <!-- Description: fixed nesting, standardized model name "reka-flash-3" -->
-          <div class="web_project-description">
-            <p>
-              Designed and developed a web app for JumpStart Retail Store using PHP (Laravel) with Vite.js and Laravel Breeze
-              for authentication. Integrated an AI model (OpenRouter.ai — <code>reka-flash-3</code>) that automatically generates
-              product descriptions based on structured metadata (category, features, materials, style).
-            </p>
-
-            <strong>Key features include:</strong>
-            <ul>
-              <li><strong>AI-Driven Content Generation:</strong> Generates 500–700 word product descriptions aligned with brand voice.</li>
-              <li><strong>Automation:</strong> AI model ingests structured product metadata from the database to produce descriptions.</li>
-            </ul>
-          </div>
-
-          <div class="tech-stack">
-            <span class="pill">reka-flash-3</span>
-            <span class="pill">Laravel</span>
-            <span class="pill">Laravel Breeze</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">PHP</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <a rel="noopener noreferrer" class="github-link" href="https://github.com/thevinusena/Jumpstart-Retail-AI-Product-Description" target="_blank">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="Jumpstart AI screenshots">
-          <div class="slides">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/jumpstartai/homepage.png" alt="Jumpstart AI - homepage screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/jumpstartai/productspage.png" alt="Jumpstart AI - products page screenshot" loading="lazy" decoding="async">
-            <img src="https://thevinusena.github.io/portfolio/project_pics/jumpstartai/newpromptpage.png" alt="Jumpstart AI - new prompt page screenshot" loading="lazy" decoding="async">
-          </div>
-
-          <button type="button" class="prev" title="Previous Slide" aria-label="Previous slide"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-          <button type="button" class="next" title="Next Slide" aria-label="Next slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-          <button type="button" class="fullscreen-btn" title="Full screen" aria-label="Toggle fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i> Fullscreen</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" class="section-title">Contact Me</h2>
-      <div class="contact-details" role="list" aria-label="Contact methods">
-        <!-- Email: mailto link -->
-        <a href="mailto:thevinusenaratne@outlook.com" class="email" role="listitem">
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          <span>Email</span>
-        </a>
-
-        <!-- Phone: tel link (kept sample number as provided) -->
-        <a href="tel:+94771234567" class="phone" role="listitem">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>
-          <span>Phone</span>
-        </a>
-
-        <!-- Socials repeated here for convenience -->
-        <a rel="noopener noreferrer" href="https://www.linkedin.com/in/thevinusenaratne/" target="_blank" class="linkedin" role="listitem">
-          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a rel="noopener noreferrer" href="https://www.instagram.com/thevinusena/" target="_blank" class="instagram" role="listitem">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          <span>Instagram</span>
-        </a>
-        <a rel="noopener noreferrer" href="https://github.com/thevinusena" target="_blank" class="github" role="listitem">
-          <i class="fa-brands fa-github" aria-hidden="true"></i>
-          <span>GitHub</span>
-        </a>
-      </div>
-    </section>
-
-  </div> <!-- END .content -->
-
-  <!-- PDF Modal: role and aria attributes added. Note: spaces in filenames encoded for safety. -->
-  <div id="pdfModal" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
-    <div id="pdfBox">
-      <div class="pdf-controls">
-        <button id="closePdf" aria-label="Close resume viewer">
-          <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
-          <span>Close</span>
+          Resume
         </button>
-
-        <!-- Download link: spaces URL-encoded to avoid issues -->
-        <a id="downloadPdf" href="https://thevinusena.github.io/portfolio/Thevinu%20Senaratne%20-%20Resume.pdf" download>
-          <i class="fa-solid fa-download" aria-hidden="true"></i>
-          <span>Download</span>
-        </a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" data-menu-toggle>
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
+    </nav>
+  </header>
 
-      <!-- PDF viewer iframe: src spaces encoded. Title provided for accessibility. -->
-      <iframe title="Resume PDF Viewer" id="pdfViewer" src="https://thevinusena.github.io/portfolio/Thevinu%20Senaratne%20-%20Resume.pdf"></iframe>
+  <div class="mobile-overlay" data-menu-overlay hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="eyebrow">Navigation</span>
+      <button class="icon-button" type="button" aria-label="Close menu" data-menu-close>
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Stack</a>
+    <a href="#education">Education</a>
+    <a href="#web_projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="button button-primary mobile-resume" type="button" data-open-pdf data-menu-action aria-controls="pdfModal" aria-expanded="false">
+      <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+      Resume
+    </button>
+    <div class="mobile-socials" aria-label="Social links">
+      <a class="icon-button" href="https://github.com/thevinusena" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+      <a class="icon-button" href="https://www.linkedin.com/in/thevinusenaratne/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a class="icon-button" href="https://www.instagram.com/thevinusena/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="hero-section section" id="home" aria-labelledby="home-heading">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Software Engineering Undergraduate</p>
+          <h1 id="home-heading" class="hero-title reveal">
+            Thevinu<br>Senaratne
+          </h1>
+          <p class="hero-lede reveal">
+            I build clean web interfaces, Laravel applications, and AI-supported product experiences with a strong eye for design.
+          </p>
+          <div class="hero-tags reveal" aria-label="Current focus areas">
+            <span>AI apps</span>
+            <span>Laravel</span>
+            <span>UI engineering</span>
+            <span>MySQL</span>
+          </div>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#web_projects">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+              View Projects
+            </a>
+            <a class="button" href="#contact">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Portrait and quick profile facts">
+          <div class="portrait-frame">
+            <img src="pic1.JPG" alt="Portrait of Thevinu Senaratne" loading="eager">
+          </div>
+          <div class="signal-card">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Available for web and AI-focused projects</span>
+          </div>
+          <dl class="hero-metrics">
+            <div>
+              <dt>Focus</dt>
+              <dd>Full-stack web</dd>
+            </div>
+            <div>
+              <dt>Base</dt>
+              <dd>Sri Lanka</dd>
+            </div>
+            <div>
+              <dt>Mode</dt>
+              <dd>Design-led build</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-split" id="about" aria-labelledby="about-heading">
+      <div class="container split-grid">
+        <div class="section-kicker reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-heading">Builder with a design nerve.</h2>
+        </div>
+        <div class="section-body reveal">
+          <p>
+            I am a software engineering undergraduate with a design foundation and a practical interest in AI-powered tools. I enjoy turning rough ideas into interfaces that feel clear, responsive, and useful.
+          </p>
+          <p>
+            My work sits between frontend polish and backend structure: Laravel applications, database-backed workflows, clean UI systems, and small automation features that make products feel smarter.
+          </p>
+          <div class="about-actions">
+            <a class="button button-primary" href="https://buymeacoffee.com/thevinu" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+              Buy Me a Coffee
+            </a>
+            <a class="button" href="https://github.com/thevinusena" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Stack</p>
+          <h2 id="skills-heading">Tools I use to ship the idea.</h2>
+        </div>
+
+        <div class="skill-grid" role="list" aria-label="Skills list">
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-brands fa-html5" aria-hidden="true"></i></span>
+            <h3>HTML</h3>
+            <p>Semantic structure, accessible pages, and clean content flow.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span>
+            <h3>CSS</h3>
+            <p>Responsive systems, motion, visual polish, and layout craft.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-brands fa-square-js" aria-hidden="true"></i></span>
+            <h3>JavaScript</h3>
+            <p>Interactive UI behavior, carousels, modals, and client-side logic.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-brands fa-laravel" aria-hidden="true"></i></span>
+            <h3>Laravel</h3>
+            <p>Authentication, MVC workflows, dashboards, and app foundations.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><img src="mysql_icon.svg" alt="" loading="lazy"></span>
+            <h3>MySQL</h3>
+            <p>Relational schemas, queries, and database-backed product flows.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></span>
+            <h3>Python</h3>
+            <p>Automation, AI experiments, and lightweight scripting.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-brands fa-java" aria-hidden="true"></i></span>
+            <h3>Java</h3>
+            <p>Object-oriented fundamentals and structured programming practice.</p>
+          </article>
+          <article class="skill-card reveal" role="listitem">
+            <span class="skill-icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+            <h3>Graphic Design</h3>
+            <p>Visual systems, composition, and sharper presentation decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-split" id="education" aria-labelledby="education-heading">
+      <div class="container split-grid">
+        <div class="section-kicker reveal">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-heading">Formal study and technical foundation.</h2>
+        </div>
+        <ol class="timeline-list reveal">
+          <li>
+            <div>
+              <h3>BSc. Software Engineering</h3>
+              <p>Lithan EduClaas, Singapore</p>
+            </div>
+            <time datetime="2023">2023 - Present</time>
+          </li>
+          <li>
+            <div>
+              <h3>Diploma in Software Engineering</h3>
+              <p>Esoft Metro Campus</p>
+            </div>
+            <time datetime="2020">2020 - 2022</time>
+          </li>
+          <li>
+            <div>
+              <h3>Primary and Secondary Education</h3>
+              <p>S. Thomas' College, Mount Lavinia</p>
+            </div>
+            <time datetime="2009">2009 - 2023</time>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="web_projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Selected Projects</p>
+          <h2 id="projects-heading">Case studies from web, AI, and product UI work.</h2>
+        </div>
+
+        <div class="project-stack">
+          <article class="project-card reveal" id="abc-cars">
+            <div class="project-copy">
+              <span class="project-index">01</span>
+              <h3>ABC Cars</h3>
+              <p>
+                A used car sales portal built with Laravel Breeze and MySQL, covering authentication, vehicle listings, bidding, test-drive scheduling, profile updates, and admin review workflows.
+              </p>
+              <div class="tech-stack" aria-label="ABC Cars technology stack">
+                <span>Laravel</span>
+                <span>Laravel Breeze</span>
+                <span>MySQL</span>
+                <span>PHP</span>
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <a class="project-link" href="https://github.com/thevinusena/abc-cars" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                View on GitHub
+              </a>
+            </div>
+            <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="ABC Cars screenshots">
+              <div class="slides">
+                <img src="project_pics/abc_cars/homepage.png" alt="ABC Cars homepage screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/abc_cars/aboutpage.png" alt="ABC Cars about page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/abc_cars/searchpage.png" alt="ABC Cars search page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/abc_cars/listingpage.png" alt="ABC Cars listing page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/abc_cars/admindashpage.png" alt="ABC Cars admin dashboard screenshot" loading="lazy" decoding="async">
+              </div>
+              <div class="slide-controls">
+                <button type="button" class="prev" aria-label="Previous ABC Cars screenshot"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" class="next" aria-label="Next ABC Cars screenshot"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                <button type="button" class="fullscreen-btn" aria-label="View ABC Cars screenshots fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="lifesync-ai">
+            <div class="project-copy">
+              <span class="project-index">02</span>
+              <h3>LifeSync AI</h3>
+              <p>
+                A Laravel web app that generates weekly workout and meal plans from user health profiles, preferences, sleep, stress, and travel context using an OpenRouter AI model.
+              </p>
+              <div class="tech-stack" aria-label="LifeSync AI technology stack">
+                <span>reka-flash-3</span>
+                <span>Laravel</span>
+                <span>Laravel Breeze</span>
+                <span>MySQL</span>
+                <span>PHP</span>
+                <span>CSS</span>
+              </div>
+              <a class="project-link" href="https://github.com/thevinusena/lifesync-AI" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                View on GitHub
+              </a>
+            </div>
+            <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="LifeSync AI screenshots">
+              <div class="slides">
+                <img src="project_pics/lifesync_ai/homepage.png" alt="LifeSync AI homepage screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/lifesync_ai/aboutpage.png" alt="LifeSync AI about page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/lifesync_ai/loginpage.png" alt="LifeSync AI login page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/lifesync_ai/profilepage.png" alt="LifeSync AI profile page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/lifesync_ai/planspage.png" alt="LifeSync AI plans page screenshot" loading="lazy" decoding="async">
+              </div>
+              <div class="slide-controls">
+                <button type="button" class="prev" aria-label="Previous LifeSync AI screenshot"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" class="next" aria-label="Next LifeSync AI screenshot"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                <button type="button" class="fullscreen-btn" aria-label="View LifeSync AI screenshots fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="clarity-consultants">
+            <div class="project-copy">
+              <span class="project-index">03</span>
+              <h3>Clarity Consultants LK</h3>
+              <p>
+                A live marketing website for Clarity Consultants, including responsive pages, hosting and domain setup, PHP contact handling, and JavaScript sliders for hero and testimonial content.
+              </p>
+              <div class="tech-stack" aria-label="Clarity Consultants technology stack">
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Hostinger</span>
+                <span>GitHub</span>
+              </div>
+              <a class="project-link" href="https://clarityconsultantslk.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                View Website
+              </a>
+            </div>
+            <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="Clarity Consultants screenshots">
+              <div class="slides">
+                <img src="project_pics/clarityconsultantslk/home.png" alt="Clarity Consultants homepage screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/clarityconsultantslk/about.png" alt="Clarity Consultants about page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/clarityconsultantslk/services.png" alt="Clarity Consultants services page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/clarityconsultantslk/team.png" alt="Clarity Consultants team page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/clarityconsultantslk/contact.png" alt="Clarity Consultants contact page screenshot" loading="lazy" decoding="async">
+              </div>
+              <div class="slide-controls">
+                <button type="button" class="prev" aria-label="Previous Clarity Consultants screenshot"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" class="next" aria-label="Next Clarity Consultants screenshot"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                <button type="button" class="fullscreen-btn" aria-label="View Clarity Consultants screenshots fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="jumpstart-ai">
+            <div class="project-copy">
+              <span class="project-index">04</span>
+              <h3>Jumpstart AI</h3>
+              <p>
+                A Laravel and Vite web app for retail product-description generation, using structured product metadata to create longer brand-aligned copy through an AI model.
+              </p>
+              <div class="tech-stack" aria-label="Jumpstart AI technology stack">
+                <span>reka-flash-3</span>
+                <span>Laravel</span>
+                <span>Laravel Breeze</span>
+                <span>MySQL</span>
+                <span>PHP</span>
+                <span>HTML</span>
+              </div>
+              <a class="project-link" href="https://github.com/thevinusena/Jumpstart-Retail-AI-Product-Description" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                View on GitHub
+              </a>
+            </div>
+            <div class="web_project-slideshow" role="region" aria-roledescription="carousel" aria-label="Jumpstart AI screenshots">
+              <div class="slides">
+                <img src="project_pics/jumpstartai/homepage.png" alt="Jumpstart AI homepage screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/jumpstartai/productspage.png" alt="Jumpstart AI products page screenshot" loading="lazy" decoding="async">
+                <img src="project_pics/jumpstartai/newpromptpage.png" alt="Jumpstart AI prompt page screenshot" loading="lazy" decoding="async">
+              </div>
+              <div class="slide-controls">
+                <button type="button" class="prev" aria-label="Previous Jumpstart AI screenshot"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" class="next" aria-label="Next Jumpstart AI screenshot"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                <button type="button" class="fullscreen-btn" aria-label="View Jumpstart AI screenshots fullscreen"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-layout">
+        <div class="section-header reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-heading">Have an idea worth building?</h2>
+          <p>Send a message, open the resume, or find me on the usual channels.</p>
+        </div>
+
+        <div class="contact-grid reveal" role="list" aria-label="Contact methods">
+          <a href="mailto:thevinusenaratne@outlook.com" role="listitem">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+            <strong>thevinusenaratne@outlook.com</strong>
+          </a>
+          <a href="tel:+94771234567" role="listitem">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>Phone</span>
+            <strong>+94 77 123 4567</strong>
+          </a>
+          <a href="https://www.linkedin.com/in/thevinusenaratne/" target="_blank" rel="noopener noreferrer" role="listitem">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+            <strong>/in/thevinusenaratne</strong>
+          </a>
+          <a href="https://www.instagram.com/thevinusena/" target="_blank" rel="noopener noreferrer" role="listitem">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+            <strong>@thevinusena</strong>
+          </a>
+          <a href="https://github.com/thevinusena" target="_blank" rel="noopener noreferrer" role="listitem">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+            <strong>@thevinusena</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Thevinu Senaratne</span>
+      <span>Built with HTML, CSS, and vanilla JavaScript.</span>
+    </div>
+  </footer>
+
+  <div id="pdfModal" class="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdfTitle" aria-hidden="true">
+    <div id="pdfBox" class="pdf-box">
+      <div class="pdf-controls">
+        <h2 id="pdfTitle">Resume</h2>
+        <div>
+          <a id="downloadPdf" class="icon-button" href="Thevinu%20Senaratne%20-%20Resume.pdf" download aria-label="Download resume">
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+          </a>
+          <button id="closePdf" class="icon-button" type="button" aria-label="Close resume viewer">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <iframe title="Resume PDF Viewer" id="pdfViewer" src="Thevinu%20Senaratne%20-%20Resume.pdf"></iframe>
     </div>
   </div>
 
-  <!-- Scripts loaded at end (defer-like behavior). Kept original script references but moved to bottom for performance. -->
-  <script src="https://thevinusena.github.io/portfolio/resumeview.js" defer></script>
-  <script src="https://thevinusena.github.io/portfolio/projectslides.js" defer></script>
+  <script src="resumeview.js" defer></script>
+  <script src="projectslides.js" defer></script>
 </body>
 
 </html>

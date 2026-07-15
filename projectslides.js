@@ -9,6 +9,7 @@ const sectionTargets = desktopLinks
   .filter(Boolean);
 
 let lastScrollY = window.scrollY;
+let revealObserver = null;
 
 function setMenu(open, restoreFocus = true) {
   if (!mobileMenu || !menuToggle || !mobileOverlay) return;
@@ -26,6 +27,110 @@ function setMenu(open, restoreFocus = true) {
     menuToggle.focus();
   }
 }
+
+function initRevealItems(items = document.querySelectorAll(".reveal")) {
+  const revealItems = [...items].filter((item) => !item.dataset.revealReady);
+
+  if (!revealItems.length) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealItems.forEach((item) => {
+      item.dataset.revealReady = "true";
+      item.classList.add("is-visible");
+    });
+    return;
+  }
+
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.14,
+      rootMargin: "0px 0px -44px 0px",
+    });
+  }
+
+  revealItems.forEach((item, index) => {
+    item.dataset.revealReady = "true";
+    item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+    revealObserver.observe(item);
+  });
+}
+
+function initProjectSlideshows(root = document) {
+  root.querySelectorAll(".web_project-slideshow").forEach((slideshow) => {
+    if (slideshow.dataset.slideshowReady) return;
+
+    const slides = [...slideshow.querySelectorAll(".slides img")];
+    const prevButton = slideshow.querySelector(".prev");
+    const nextButton = slideshow.querySelector(".next");
+    const fullscreenButton = slideshow.querySelector(".fullscreen-btn");
+    const baseLabel = slideshow.getAttribute("aria-label") || "Project screenshots";
+    let index = 0;
+
+    if (!slides.length) return;
+
+    slideshow.dataset.slideshowReady = "true";
+
+    function show(nextIndex) {
+      slides[index].classList.remove("active");
+      slides[index].setAttribute("aria-hidden", "true");
+
+      index = (nextIndex + slides.length) % slides.length;
+
+      slides[index].classList.add("active");
+      slides[index].setAttribute("aria-hidden", "false");
+      slideshow.setAttribute("aria-label", `${baseLabel}, slide ${index + 1} of ${slides.length}`);
+    }
+
+    slides.forEach((slide) => slide.setAttribute("aria-hidden", "true"));
+    slides[0].classList.add("active");
+    slides[0].setAttribute("aria-hidden", "false");
+    slideshow.setAttribute("aria-label", `${baseLabel}, slide 1 of ${slides.length}`);
+
+    prevButton?.addEventListener("click", () => show(index - 1));
+    nextButton?.addEventListener("click", () => show(index + 1));
+
+    slideshow.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") show(index - 1);
+      if (event.key === "ArrowRight") show(index + 1);
+    });
+
+    function updateFullscreenButton() {
+      const isFullscreen = document.fullscreenElement === slideshow;
+      if (!fullscreenButton) return;
+
+      fullscreenButton.innerHTML = isFullscreen
+        ? '<i class="fa-solid fa-compress" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-expand" aria-hidden="true"></i>';
+      fullscreenButton.setAttribute(
+        "aria-label",
+        isFullscreen ? "Exit fullscreen screenshots" : "View screenshots fullscreen"
+      );
+    }
+
+    fullscreenButton?.addEventListener("click", async () => {
+      try {
+        if (document.fullscreenElement === slideshow) {
+          await document.exitFullscreen();
+        } else {
+          await slideshow.requestFullscreen();
+        }
+      } catch (error) {
+        console.warn("Fullscreen request was blocked.", error);
+      }
+    });
+
+    document.addEventListener("fullscreenchange", updateFullscreenButton);
+  });
+}
+
+window.initRevealItems = initRevealItems;
+window.initProjectSlideshows = initProjectSlideshows;
 
 menuToggle?.addEventListener("click", () => setMenu(true));
 menuClose?.addEventListener("click", () => setMenu(false));
@@ -65,87 +170,8 @@ if (sectionTargets.length) {
   sectionTargets.forEach((section) => navObserver.observe(section));
 }
 
-const revealItems = document.querySelectorAll(".reveal");
-
-if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, {
-    threshold: 0.14,
-    rootMargin: "0px 0px -44px 0px",
-  });
-
-  revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
-    revealObserver.observe(item);
-  });
-}
-
-document.querySelectorAll(".web_project-slideshow").forEach((slideshow) => {
-  const slides = [...slideshow.querySelectorAll(".slides img")];
-  const prevButton = slideshow.querySelector(".prev");
-  const nextButton = slideshow.querySelector(".next");
-  const fullscreenButton = slideshow.querySelector(".fullscreen-btn");
-  let index = 0;
-
-  if (!slides.length) return;
-
-  function show(nextIndex) {
-    slides[index].classList.remove("active");
-    slides[index].setAttribute("aria-hidden", "true");
-
-    index = (nextIndex + slides.length) % slides.length;
-
-    slides[index].classList.add("active");
-    slides[index].setAttribute("aria-hidden", "false");
-    slideshow.setAttribute("aria-label", `${slideshow.getAttribute("aria-label").replace(/, slide .*/, "")}, slide ${index + 1} of ${slides.length}`);
-  }
-
-  slides.forEach((slide) => slide.setAttribute("aria-hidden", "true"));
-  slides[0].classList.add("active");
-  slides[0].setAttribute("aria-hidden", "false");
-
-  prevButton?.addEventListener("click", () => show(index - 1));
-  nextButton?.addEventListener("click", () => show(index + 1));
-
-  slideshow.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") show(index - 1);
-    if (event.key === "ArrowRight") show(index + 1);
-  });
-
-  function updateFullscreenButton() {
-    const isFullscreen = document.fullscreenElement === slideshow;
-    if (!fullscreenButton) return;
-
-    fullscreenButton.innerHTML = isFullscreen
-      ? '<i class="fa-solid fa-compress" aria-hidden="true"></i>'
-      : '<i class="fa-solid fa-expand" aria-hidden="true"></i>';
-    fullscreenButton.setAttribute(
-      "aria-label",
-      isFullscreen ? "Exit fullscreen screenshots" : "View screenshots fullscreen"
-    );
-  }
-
-  fullscreenButton?.addEventListener("click", async () => {
-    try {
-      if (document.fullscreenElement === slideshow) {
-        await document.exitFullscreen();
-      } else {
-        await slideshow.requestFullscreen();
-      }
-    } catch (error) {
-      console.warn("Fullscreen request was blocked.", error);
-    }
-  });
-
-  document.addEventListener("fullscreenchange", updateFullscreenButton);
-});
+initRevealItems();
+initProjectSlideshows();
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && document.body.classList.contains("menu-open")) {

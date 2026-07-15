@@ -356,6 +356,15 @@
   gap: var(--space-6);
 }
 
+.project-fallback {
+  margin: 0;
+  padding: var(--space-5);
+  color: var(--color-muted);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.04);
+}
+
 .project-card {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);

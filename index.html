@@ -25,6 +25,7 @@
       <div class="desktop-nav" aria-label="Section links">
         <a href="#about">About</a>
         <a href="#skills">Stack</a>
+        <a href="#jobs">Jobs</a>
         <a href="#education">Education</a>
         <a href="#web_projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -59,6 +60,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Stack</a>
+    <a href="#jobs">Jobs</a>
     <a href="#education">Education</a>
     <a href="#web_projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -89,13 +91,12 @@
             Thevinu<br>Senaratne
           </h1>
           <p class="hero-lede reveal">
-            I build clean web interfaces, Laravel applications, and AI-supported product experiences with a strong eye for design.
+            I build full-stack Laravel applications, and AI-supported product intergrations with a strong eye for design.
           </p>
           <div class="hero-tags reveal" aria-label="Current focus areas">
-            <span>AI apps</span>
-            <span>Laravel</span>
-            <span>UI engineering</span>
-            <span>Artificial Intelligence</span>
+            <span>Artificial Intelligence apps</span>
+            <span>Full-stack web development</span>
+            <span>UI/UX & Graphic Design</span>
           </div>
           <div class="hero-actions reveal">
             <a class="button button-primary" href="#web_projects">
@@ -120,7 +121,7 @@
           <dl class="hero-metrics">
             <div>
               <dt>Focus</dt>
-              <dd>Full-stack web</dd>
+              <dd>AI & ML</dd>
             </div>
             <div>
               <dt>Base</dt>
@@ -128,7 +129,7 @@
             </div>
             <div>
               <dt>Mode</dt>
-              <dd>Design-led build</dd>
+              <dd>Pro Design</dd>
             </div>
           </dl>
         </div>
@@ -148,10 +149,35 @@
           <p>
             My work sits between frontend polish and backend structure: Laravel applications, database-backed workflows, clean UI systems, and small automation features that make products feel smarter.
           </p>
+          <div class="creator-channels" aria-labelledby="creator-channels-heading">
+            <div class="creator-channels-copy">
+              <p class="eyebrow">Beyond the build</p>
+              <h3 id="creator-channels-heading">My creator channels</h3>
+              <p>
+                AutoPaddle is my serious automotive project, but I also like showing the person behind the work. One channel follows cars and vehicle culture; the other is where I share travel vlogs, restaurants, and everyday life as I keep making more videos.
+              </p>
+            </div>
+            <div class="creator-channel-grid">
+              <a class="creator-channel-card" href="https://www.youtube.com/@thevinusenaratne" target="_blank" rel="noopener noreferrer">
+                <span class="creator-channel-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+                <span>
+                  <strong>Thevinu Senaratne</strong>
+                  <small>Travel, restaurants, and life vlogs.</small>
+                </span>
+              </a>
+              <a class="creator-channel-card creator-channel-card-accent" href="https://www.youtube.com/@autopaddle" target="_blank" rel="noopener noreferrer">
+                <span class="creator-channel-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+                <span>
+                  <strong>AutoPaddle</strong>
+                  <small>Vehicle reviews and car culture.</small>
+                </span>
+              </a>
+            </div>
+          </div>
           <div class="about-actions">
-            <a class="button button-primary" href="https://buymeacoffee.com/thevinu" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
-              Buy Me a Coffee
+            <a class="button button-primary" href="https://instagram.com/thevinusena" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              instagram
             </a>
             <a class="button" href="https://github.com/thevinusena" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
@@ -214,38 +240,6 @@
       </div>
     </section>
 
-    <section class="section section-split" id="education" aria-labelledby="education-heading">
-      <div class="container split-grid">
-        <div class="section-kicker reveal">
-          <p class="eyebrow">Education</p>
-          <h2 id="education-heading">Formal study and technical foundation.</h2>
-        </div>
-        <ol class="timeline-list reveal">
-          <li>
-            <div>
-              <h3>BSc. Software Engineering</h3>
-              <p>Lithan EduClaas, Singapore</p>
-            </div>
-            <time datetime="2023">2023 - Present</time>
-          </li>
-          <li>
-            <div>
-              <h3>Diploma in Software Engineering</h3>
-              <p>Esoft Metro Campus</p>
-            </div>
-            <time datetime="2020">2020 - 2022</time>
-          </li>
-          <li>
-            <div>
-              <h3>Primary and Secondary Education</h3>
-              <p>S. Thomas' College, Mount Lavinia</p>
-            </div>
-            <time datetime="2009">2009 - 2023</time>
-          </li>
-        </ol>
-      </div>
-    </section>
-
     <section class="section projects-section" id="web_projects" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-header reveal">
@@ -273,6 +267,36 @@
             </p>
           </noscript>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-split" id="jobs" aria-labelledby="jobs-heading">
+      <div class="container split-grid">
+        <div class="section-kicker reveal">
+          <p class="eyebrow">Jobs</p>
+          <h2 id="jobs-heading">Professional experience and applied work.</h2>
+        </div>
+        <ol class="timeline-list reveal" id="jobsList"></ol>
+        <noscript>
+          <p class="project-fallback">
+            Job entries are loaded with JavaScript. Please enable JavaScript to view them.
+          </p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="section section-split" id="education" aria-labelledby="education-heading">
+      <div class="container split-grid">
+        <div class="section-kicker reveal">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-heading">Formal study and technical foundation.</h2>
+        </div>
+        <ol class="timeline-list reveal" id="educationList"></ol>
+        <noscript>
+          <p class="project-fallback">
+            Education entries are loaded with JavaScript. Please enable JavaScript to view them.
+          </p>
+        </noscript>
       </div>
     </section>
 
@@ -340,6 +364,8 @@
   </div>
 
   <script src="resumeview.js" defer></script>
+  <script src="exp-data.js" defer></script>
+  <script src="exp-render.js" defer></script>
   <script src="projects-data.js" defer></script>
   <script src="projects-render.js" defer></script>
   <script src="projectslides.js" defer></script>

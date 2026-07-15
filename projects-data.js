@@ -3,10 +3,17 @@ window.portfolioProjects = [
     id: "autopaddle",
     title: "AutoPaddle",
     description:
-      "A luxury-first automotive marketplace and ecosystem for Sri Lanka, designed and developed entirely from the ground up. AutoPaddle brings together vehicle sales, rentals, dealerships, rental companies, and automotive businesses into one premium platform with AI-powered experiences, advanced search, secure marketplace infrastructure, moderator systems, and a refined user experience.",
+      "A luxury automotive marketplace and ecosystem for Sri Lanka, designed and developed entirely from the ground up. AutoPaddle brings together vehicle sales, rentals, dealerships, rental companies, and automotive businesses into one premium platform with AI-powered experiences, advanced search, secure marketplace infrastructure, and a refined user experience.",
     url: "https://autopaddlehq.com/",
     urlLabel: "Visit AutoPaddle",
     urlIcon: "fa-solid fa-globe",
+    secondaryLinks: [
+      {
+        url: "https://www.youtube.com/@autopaddle",
+        label: "Watch AutoPaddle",
+        icon: "fa-brands fa-youtube",
+      },
+    ],
     technologies: [
       "Full-Stack Web Development",
       "Laravel",
@@ -27,15 +34,53 @@ window.portfolioProjects = [
       },
       {
         src: "project_pics/autopaddle/dash.png",
-        alt: "AutoPaddle vehicles marketplace screenshot",
+        alt: "AutoPaddle user dashboard screenshot",
       },
     ],
+  },
+  {
+  id: "sanara-portfolio",
+  title: "Sanara Premaratne Portfolio",
+  description:
+    "A modern personal portfolio website designed and developed for a Computer Science undergraduate & Cloud Solutions & Services Engineer Sanara Premaratne. The website presents her education, skills, projects, professional experience, certifications, and community involvement through a refined, responsive interface focused on clarity, accessibility, and elegant design.",
+  url: "https://your-portfolio-url.com/",
+  urlLabel: "View Portfolio",
+  urlIcon: "fa-solid fa-globe",
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "CSS Animations",
+    "light/dark mode",
+    "Responsive Design",
+    "UI/UX Design",
+    "Accessibility",
+    "GitHub",
+  ],
+  screenshots: [
+    {
+      src: "project_pics/sanara-portfolio/homelight.png",
+      alt: "Sanara Premaratne portfolio light mode homepage screenshot",
+    },
+    {
+      src: "project_pics/sanara-portfolio/homedark.png",
+      alt: "Sanara Premaratne portfolio dark mode homepage screenshot",
+    },
+    {
+      src: "project_pics/sanara-portfolio/about.png",
+      alt: "About section",
+    },
+    {
+      src: "project_pics/sanara-portfolio/experience.png",
+      alt: "Experience section",
+    },
+  ],
   },
   {
     id: "clarity-consultants",
     title: "Clarity Consultants",
     description:
-      "A live marketing website for Clarity Consultants, including responsive pages, hosting and domain setup, PHP contact handling, and JavaScript sliders for hero and testimonial content.",
+      "A live marketing website for Clarity Consultants, including responsive pages, hosting and domain setup, PHP contact handling, and JavaScript sliders for hero and testimonial content. Designed a clean, professional interface to showcase the firm's accounting, taxation, auditing, and advisory services while emphasizing trust and transparency.",
     url: "https://clarityconsultantslk.com/",
     urlLabel: "Visit Clarity Consultants",
     urlIcon: "fa-solid fa-globe",

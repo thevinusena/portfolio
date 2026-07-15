@@ -56,7 +56,7 @@ function createProjectCard(project, index) {
     createTextElement("h3", project.title),
     createTextElement("p", project.description),
     createTechStack(project.title, project.technologies),
-    createProjectLink(project)
+    createProjectLinks(project)
   );
 
   article.append(copy, createProjectSlideshow(project));
@@ -82,8 +82,8 @@ function createUniversityProjectCard(project, index) {
     createTechStack(project.title, project.technologies)
   );
 
-  const link = createProjectLink(project);
-  if (link) body.appendChild(link);
+  const links = createProjectLinks(project);
+  if (links) body.appendChild(links);
 
   article.appendChild(body);
   return article;
@@ -119,17 +119,43 @@ function createTechStack(title, technologies = []) {
 function createProjectLink(project) {
   if (!project.url || !project.urlLabel || !project.urlIcon) return null;
 
+  return createExternalLink(project.url, project.urlLabel, project.urlIcon, "project-link");
+}
+
+function createProjectLinks(project) {
+  const links = [];
+  const primaryLink = createProjectLink(project);
+
+  if (primaryLink) links.push(primaryLink);
+
+  if (Array.isArray(project.secondaryLinks)) {
+    project.secondaryLinks.forEach((item) => {
+      if (!item || !item.url || !item.label || !item.icon) return;
+      links.push(createExternalLink(item.url, item.label, item.icon, "project-link project-link-secondary"));
+    });
+  }
+
+  if (!links.length) return null;
+
+  const group = document.createElement("div");
+  group.className = "project-links";
+  group.append(...links);
+  return group;
+}
+
+function createExternalLink(url, label, iconClassName, className) {
   const link = document.createElement("a");
   link.className = "project-link";
-  link.href = project.url;
+  if (className) link.className = className;
+  link.href = url;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
 
   const linkIcon = document.createElement("i");
-  linkIcon.className = project.urlIcon;
+  linkIcon.className = iconClassName;
   linkIcon.setAttribute("aria-hidden", "true");
 
-  link.append(linkIcon, document.createTextNode(project.urlLabel));
+  link.append(linkIcon, document.createTextNode(label));
   return link;
 }
 

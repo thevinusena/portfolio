@@ -1,95 +1,50 @@
 window.portfolioProjects = [
   {
-    id: "abc-cars",
-    title: "ABC Cars",
+    id: "autopaddle",
+    title: "AutoPaddle",
     description:
-      "A used car sales portal built with Laravel Breeze and MySQL, covering authentication, vehicle listings, bidding, test-drive scheduling, profile updates, and admin review workflows.",
-    url: "https://github.com/thevinusena/abc-cars",
-    urlLabel: "View on GitHub",
-    urlIcon: "fa-brands fa-github",
+      "A luxury-first automotive marketplace and ecosystem for Sri Lanka, designed and developed entirely from the ground up. AutoPaddle brings together vehicle sales, rentals, dealerships, rental companies, and automotive businesses into one premium platform with AI-powered experiences, advanced search, secure marketplace infrastructure, moderator systems, and a refined user experience.",
+    url: "https://autopaddlehq.com/",
+    urlLabel: "Visit AutoPaddle",
+    urlIcon: "fa-solid fa-globe",
     technologies: [
+      "Full-Stack Web Development",
       "Laravel",
-      "Laravel Breeze",
-      "Artificial Intelligence",
-      "PHP",
-      "HTML",
-      "CSS",
+      "AI Integration",
+      "PayHere Payment Gateway",
+      "Server Deployment",
+      "Mailing Automation",
+      "Responsive Design",
     ],
     screenshots: [
       {
-        src: "project_pics/abc_cars/homepage.png",
-        alt: "ABC Cars homepage screenshot",
+        src: "project_pics/autopaddle/home.png",
+        alt: "AutoPaddle homepage screenshot",
       },
       {
-        src: "project_pics/abc_cars/aboutpage.png",
-        alt: "ABC Cars about page screenshot",
+        src: "project_pics/autopaddle/about.png",
+        alt: "AutoPaddle about page screenshot",
       },
       {
-        src: "project_pics/abc_cars/searchpage.png",
-        alt: "ABC Cars search page screenshot",
-      },
-      {
-        src: "project_pics/abc_cars/listingpage.png",
-        alt: "ABC Cars listing page screenshot",
-      },
-      {
-        src: "project_pics/abc_cars/admindashpage.png",
-        alt: "ABC Cars admin dashboard screenshot",
-      },
-    ],
-  },
-  {
-    id: "lifesync-ai",
-    title: "LifeSync AI",
-    description:
-      "A Laravel web app that generates weekly workout and meal plans from user health profiles, preferences, sleep, stress, and travel context using an OpenRouter AI model.",
-    url: "https://github.com/thevinusena/lifesync-AI",
-    urlLabel: "View on GitHub",
-    urlIcon: "fa-brands fa-github",
-    technologies: [
-      "reka-flash-3",
-      "Laravel",
-      "Laravel Breeze",
-      "Artificial Intelligence",
-      "PHP",
-      "CSS",
-    ],
-    screenshots: [
-      {
-        src: "project_pics/lifesync_ai/homepage.png",
-        alt: "LifeSync AI homepage screenshot",
-      },
-      {
-        src: "project_pics/lifesync_ai/aboutpage.png",
-        alt: "LifeSync AI about page screenshot",
-      },
-      {
-        src: "project_pics/lifesync_ai/loginpage.png",
-        alt: "LifeSync AI login page screenshot",
-      },
-      {
-        src: "project_pics/lifesync_ai/profilepage.png",
-        alt: "LifeSync AI profile page screenshot",
-      },
-      {
-        src: "project_pics/lifesync_ai/planspage.png",
-        alt: "LifeSync AI plans page screenshot",
+        src: "project_pics/autopaddle/dash.png",
+        alt: "AutoPaddle vehicles marketplace screenshot",
       },
     ],
   },
   {
     id: "clarity-consultants",
-    title: "Clarity Consultants LK",
+    title: "Clarity Consultants",
     description:
       "A live marketing website for Clarity Consultants, including responsive pages, hosting and domain setup, PHP contact handling, and JavaScript sliders for hero and testimonial content.",
     url: "https://clarityconsultantslk.com/",
-    urlLabel: "View Website",
+    urlLabel: "Visit Clarity Consultants",
     urlIcon: "fa-solid fa-globe",
     technologies: [
       "JavaScript",
       "PHP",
       "HTML",
       "CSS",
+      "Responsive Design",
       "Hostinger",
       "GitHub",
     ],
@@ -116,8 +71,11 @@ window.portfolioProjects = [
       },
     ],
   },
+];
+
+window.universityProjects = [
   {
-    id: "jumpstart-ai",
+    id: "university-jumpstart-ai",
     title: "Jumpstart AI",
     description:
       "A Laravel and Vite web app for retail product-description generation, using structured product metadata to create longer brand-aligned copy through an AI model.",
@@ -132,19 +90,51 @@ window.portfolioProjects = [
       "PHP",
       "HTML",
     ],
-    screenshots: [
-      {
-        src: "project_pics/jumpstartai/homepage.png",
-        alt: "Jumpstart AI homepage screenshot",
-      },
-      {
-        src: "project_pics/jumpstartai/productspage.png",
-        alt: "Jumpstart AI products page screenshot",
-      },
-      {
-        src: "project_pics/jumpstartai/newpromptpage.png",
-        alt: "Jumpstart AI prompt page screenshot",
-      },
+    screenshot: {
+      src: "project_pics/jumpstartai/homepage.png",
+      alt: "Jumpstart AI homepage screenshot",
+    },
+  },
+  {
+    id: "university-lifesync-ai",
+    title: "LifeSync AI",
+    description:
+      "A Laravel web app that generates weekly workout and meal plans from user health profiles, preferences, sleep, stress, and travel context using an OpenRouter AI model.",
+    url: "https://github.com/thevinusena/lifesync-AI",
+    urlLabel: "View on GitHub",
+    urlIcon: "fa-brands fa-github",
+    technologies: [
+      "reka-flash-3",
+      "Laravel",
+      "Laravel Breeze",
+      "Artificial Intelligence",
+      "PHP",
+      "CSS",
     ],
+    screenshot: {
+      src: "project_pics/lifesync_ai/homepage.png",
+      alt: "LifeSync AI homepage screenshot",
+    },
+  },
+  {
+    id: "university-abc-cars",
+    title: "ABC Cars",
+    description:
+      "A used car sales portal built with Laravel Breeze and MySQL, covering authentication, vehicle listings, bidding, test-drive scheduling, profile updates, and admin review workflows.",
+    url: "https://github.com/thevinusena/abc-cars",
+    urlLabel: "View on GitHub",
+    urlIcon: "fa-brands fa-github",
+    technologies: [
+      "Laravel",
+      "Laravel Breeze",
+      "Artificial Intelligence",
+      "PHP",
+      "HTML",
+      "CSS",
+    ],
+    screenshot: {
+      src: "project_pics/abc_cars/homepage.png",
+      alt: "ABC Cars homepage screenshot",
+    },
   },
 ];

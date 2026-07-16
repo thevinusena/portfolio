@@ -15,13 +15,13 @@ window.jobs = [
 window.education = [
   {
     qualification: "BSc. Software Engineering",
-    institution: "Lithan EduClaas, Singapore",
+    institution: "University of Roehampton, UK",
     period: "2026 - 2027",
     datetime: "2026",
   },
   {
     qualification: "Higher National Diploma in Software Engineering",
-    institution: "Lithan EduClaas, Singapore",
+    institution: "Lithan Claas2Saas, Singapore",
     period: "2023 - 2026",
     datetime: "2023",
   },
